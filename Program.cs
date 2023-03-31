@@ -9,58 +9,58 @@ namespace InventoryManagement
         {
             Console.WriteLine("Welcome to the Inventory problems");
 
-            string path = "C:\\Users\\kiran\\source\\repos\\InventoryManagement1\\InventoryManagement1\\Data.json";
+            string path = "C:\\Users\\kiran\\source\\repos\\InventoryManagement1\\InventoryManagement1\\Inventory.json";
             ReadInventory obj = new ReadInventory();
 
             InventoryDetails data = obj.Read(path);
 
-            Console.WriteLine("Types of Rices");
+            Console.WriteLine("Stock 1");
 
             Console.WriteLine("*************************************");
             Console.WriteLine("*************************************");
 
-            for (int i = 0; i < data.typesOfRice.Count; i++)
+            for (int i = 0; i < data.stock1.Count; i++)
             {
-                Console.WriteLine(data.typesOfRice[i].name);
-                Console.WriteLine(data.typesOfRice[i].weight);
-                Console.WriteLine(data.typesOfRice[i].price);
+                Console.WriteLine(data.stock1[i].shareName);
+                Console.WriteLine(data.stock1[i].NumberShares);
+                Console.WriteLine(data.stock1[i].price);
 
-                int val = data.typesOfRice[i].weight * data.typesOfRice[i].price;
-                Console.WriteLine("The price of {0} for {1} is {2}Rs. ", data.typesOfRice[i].name, data.typesOfRice[i].weight, val);
+                int val = data.stock1[i].NumberShares * data.stock1[i].price;
+                Console.WriteLine("The price of {0} for {1} stock is {2}Rs. ", data.stock1[i].shareName, data.stock1[i].shareName, val);
             }
 
             Console.WriteLine("-------------------------------------");
 
-            Console.WriteLine("Types of Wheet");
+            Console.WriteLine("Stock 2");
 
             Console.WriteLine("*************************************");
             Console.WriteLine("*************************************");
 
-            for (int i = 0; i < data.typesOfwheet.Count; i++)
+            for (int i = 0; i < data.stock2.Count; i++)
             {
-                Console.WriteLine(data.typesOfwheet[i].name);
-                Console.WriteLine(data.typesOfwheet[i].weight);
-                Console.WriteLine(data.typesOfwheet[i].price);
+                Console.WriteLine(data.stock2[i].shareName);
+                Console.WriteLine(data.stock2[i].NumberShares);
+                Console.WriteLine(data.stock2[i].price);
 
-                int val = data.typesOfwheet[i].weight * data.typesOfwheet[i].price;
-                Console.WriteLine("The price of {0} for {1} is {2}Rs. ", data.typesOfwheet[i].name, data.typesOfwheet[i].weight, val);
+                int val = data.stock2[i].NumberShares * data.stock2[i].price;
+                Console.WriteLine("The price of {0} for {1} stock is {2}Rs. ", data.stock2[i].shareName, data.stock2[i].NumberShares, val);
             }
 
             Console.WriteLine("-------------------------------------");
 
-            Console.WriteLine("Types of Pulses");
+            Console.WriteLine("Stock 3");
 
             Console.WriteLine("*************************************");
             Console.WriteLine("*************************************");
 
-            for (int i = 0; i < data.typesOfPulses.Count; i++)
+            for (int i = 0; i < data.stock3.Count; i++)
             {
-                Console.WriteLine(data.typesOfPulses[i].name);
-                Console.WriteLine(data.typesOfPulses[i].weight);
-                Console.WriteLine(data.typesOfPulses[i].price);
+                Console.WriteLine(data.stock3[i].shareName);
+                Console.WriteLine(data.stock3[i].NumberShares);
+                Console.WriteLine(data.stock3[i].price);
 
-                int val = data.typesOfPulses[i].weight * data.typesOfPulses[i].price;
-                Console.WriteLine("The price of {0} for {1} is {2}Rs. ", data.typesOfPulses[i].name, data.typesOfPulses[i].weight, val);
+                int val = data.stock3[i].NumberShares * data.stock3[i].price;
+                Console.WriteLine("The price of {0} for {1} stock is {2}Rs. ", data.stock3[i].shareName, data.stock3[i].NumberShares, val);
             }
 
             Console.WriteLine("-------------------------------------");
